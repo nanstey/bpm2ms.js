@@ -84,3 +84,26 @@ function buildTable(arr, key){
 function round2dp(num){
   return (Math.round(num*100)/100).toFixed(2);
 }
+
+// var open = false;
+// document.getElementById("learn-more").addEventListener("click", function(){
+//   if (open){
+//     document.getElementById("info").setAttribute("display", "none");
+//     open = false;
+//   } else {
+//     document.getElementById("info").setAttribute("display", "visible");
+//     open = true;
+//   }
+// });
+
+
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block'){
+      e.style.display = 'none';
+      document.getElementById('triangle').className = 'glyphicon glyphicon-triangle-right';
+   } else{
+      e.style.display = 'block';
+      document.getElementById('triangle').className = 'glyphicon glyphicon-triangle-bottom';
+   }
+}

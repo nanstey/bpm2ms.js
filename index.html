@@ -15,10 +15,21 @@
       margin-top: 10px;
       border-radius: 40px;
       max-width: 650px;
+      padding: 10px 0;
     }
     #bpm-input{
       max-width: 200px;
       margin: 0 auto;
+    }
+    #info-div {
+      padding-top: 10px;
+    }
+    #info {
+      padding: 0 70px;
+      font-size: 14px;
+    }
+    #triangle {
+      top: 3px;
     }
     .output-col{
       background: rgb(238, 238, 238);
@@ -41,72 +52,70 @@
   </style>
 </head>
 <body>
-<div id="header" class="container jumbotron">
-  <h1 class="text-center">BPM 2 MS</h1>
-  &nbsp;
+  <div id="header" class="container jumbotron">
+    <h1 class="text-center">BPM 2 MS</h1>
 
-  <div id="bpm-input" class="input-group">
+    <div id="bpm-input" class="input-group">
+        <input id="bpm" type="text" name="quant[1]" class="form-control input-number" min="30" max="240">
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-minus"></span>
+            </button>
+            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+            <button type="button" class="btn btn-success" id="update">Update</button>
+        </span>
+    </div>
 
-      <input id="bpm" type="text" name="quant[1]" class="form-control input-number" min="30" max="240">
-
-      <span class="input-group-btn">
-
-          <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
-              <span class="glyphicon glyphicon-minus"></span>
-          </button>
-          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
-              <span class="glyphicon glyphicon-plus"></span>
-          </button>
-          <button type="button" class="btn btn-success" id="update">Update</button>
-      </span>
+    <div id="info-div">
+      <p class="text-center">
+        <a id="learn-more" href="#" onclick="toggle_visibility('info');"><span id="triangle" class="glyphicon glyphicon-triangle-right"></span>What is this?</a>
+      </p>
+      <p id="info" style="display: none;">
+        This app takes a number in BPM (beats per minute) and calculates various rhythmic divisions in milliseconds. This is especially useful for audio production to find ultra fast compression/gate/delay values that are in time with the music.
+      </p>
+    </div>
   </div>
 
-</div>
-<div class="container" >
-  <div class="row-fluid">
-    <div >
-      <div class="col-md-4">
-        <div class="output-col">
-          <h3>Straight</h3>
-          <div id="straight">
-            <table>
-            </table>
+  <div class="container" >
+    <div class="row-fluid">
+      <div >
+        <div class="col-md-4">
+          <div class="output-col">
+            <h3>Straight</h3>
+            <div id="straight">
+              <table>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="output-col">
-          <h3>Dotted</h3>
-          <div id="dotted">
-            <table>
-            </table>
+        <div class="col-md-4">
+          <div class="output-col">
+            <h3>Dotted</h3>
+            <div id="dotted">
+              <table>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="output-col">
-          <h3>Triplet</h3>
-          <div id="triplet">
-            <table>
-            </table>
+        <div class="col-md-4">
+          <div class="output-col">
+            <h3>Triplet</h3>
+            <div id="triplet">
+              <table>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div id="demo">
-</div>
+
 </body>
 <footer>
-<!-- <script>
-  window.onload = function (){
-    document.getElementById("bpm").value = 120;
-    console.log( document.getElementById("bpm") );
-  };
-</script> -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="buttons.js"></script>
-<script type="text/javascript" src="bpm2ms.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="buttons.js"></script>
+  <script type="text/javascript" src="bpm2ms.js"></script>
 </footer>
 </html>
