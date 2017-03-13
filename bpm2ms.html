@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>BPM 2 MS</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rubik+Mono+One">
+  </head>
+  <style>
+    h1, h2, h3, h4 {
+      font-family: Rubik Mono One;
+    }
+    #header {
+      margin-top: 10px;
+      border-radius: 40px;
+      max-width: 650px;
+    }
+    #bpm-input{
+      max-width: 200px;
+      margin: 0 auto;
+    }
+    .output-col{
+      background: rgb(238, 238, 238);
+      border-radius: 10px;
+      padding: 2px 20px 20px 20px;
+      margin: 20px;
+    }
+    .output-col > h3{
+      text-align: center;
+    }
+    table {
+      margin: 0 auto;
+    }
+    td {
+      padding: 0 40px;
+    }
+    .right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<div id="header" class="container jumbotron">
+  <h1 class="text-center">BPM 2 MS</h1>
+  &nbsp;
+
+  <div id="bpm-input" class="input-group">
+
+      <input id="bpm" type="text" name="quant[1]" class="form-control input-number" min="30" max="240">
+
+      <span class="input-group-btn">
+
+          <button type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]">
+              <span class="glyphicon glyphicon-minus"></span>
+          </button>
+          <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+              <span class="glyphicon glyphicon-plus"></span>
+          </button>
+          <button type="button" class="btn btn-success" id="update">Update</button>
+      </span>
+  </div>
+
+</div>
+<div class="container" >
+  <div class="row-fluid">
+    <div >
+      <div class="col-md-4">
+        <div class="output-col">
+          <h3>Straight</h3>
+          <div id="straight">
+            <table>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="output-col">
+          <h3>Dotted</h3>
+          <div id="dotted">
+            <table>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="output-col">
+          <h3>Triplet</h3>
+          <div id="triplet">
+            <table>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="demo">
+</div>
+</body>
+<footer>
+<!-- <script>
+  window.onload = function (){
+    document.getElementById("bpm").value = 120;
+    console.log( document.getElementById("bpm") );
+  };
+</script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="buttons.js"></script>
+<script type="text/javascript" src="bpm2ms.js"></script>
+</footer>
+</html>
