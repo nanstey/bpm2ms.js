@@ -63,39 +63,21 @@ function buildTable(arr, key){
     name.appendChild( text );
     tr.appendChild(name);
 
-
     var time = document.createElement("td");
     text = document.createTextNode( arr[i][key] + 'ms' );
     time.appendChild( text );
     time.className = "right";
     tr.appendChild(time);
 
-
-
-    // console.log(arr[i]["duration"], arr[i][key]);
-
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);
-  // console.log(JSON.stringify(table));
   return table;
 }
 
 function round2dp(num){
   return (Math.round(num*100)/100).toFixed(2);
 }
-
-// var open = false;
-// document.getElementById("learn-more").addEventListener("click", function(){
-//   if (open){
-//     document.getElementById("info").setAttribute("display", "none");
-//     open = false;
-//   } else {
-//     document.getElementById("info").setAttribute("display", "visible");
-//     open = true;
-//   }
-// });
-
 
 function toggle_visibility(id) {
    var e = document.getElementById(id);
