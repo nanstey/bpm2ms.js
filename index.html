@@ -11,6 +11,15 @@
       h1, h2, h3, h4 {
         font-family: Rubik Mono One;
       }
+      table {
+        margin: 0 auto;
+      }
+      td {
+        padding: 0 18px;
+      }
+      .right {
+        text-align: right;
+      }
       #header {
         margin-top: 10px;
         border-radius: 40px;
@@ -40,14 +49,15 @@
       .output-col > h3{
         text-align: center;
       }
-      table {
-        margin: 0 auto;
+      #footer {
+        text-align: center;
+        margin: 20px;
       }
-      td {
-        padding: 0 18px;
+      #footer img {
+        width: 64px;
       }
-      .right {
-        text-align: right;
+      #footer img:hover {
+        opacity: .6;
       }
     </style>
   </head>
@@ -110,6 +120,14 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div id="footer">
+      <p>
+        <a id="git" href="https://github.com/nanstey/bpm2ms.js" target="_blank">
+          <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-128.png" />
+        </a>
+      </p>
     </div>
 
   </body>
