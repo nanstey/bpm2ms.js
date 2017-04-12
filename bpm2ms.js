@@ -46,11 +46,6 @@ function bpm2ms(bpm){
   document.querySelector("#triplet>table").remove();
   triplet.appendChild(tTable);
 
-  // document.getElementById("straight").removeChild().appendChild(straight);
-  // document.getElementById("dotted").innerHTML = dotted;
-  // document.getElementById("triplet").innerHTML = triplet;
-
-  // document.getElementById("demo").innerHTML = JSON.stringify(straight);
 };
 
 function buildTable(arr, key){
@@ -77,15 +72,4 @@ function buildTable(arr, key){
 
 function round2dp(num){
   return (Math.round(num*100)/100).toFixed(2);
-}
-
-function toggle_visibility(id) {
-   var e = document.getElementById(id);
-   if(e.style.display == 'block'){
-      e.style.display = 'none';
-      document.getElementById('triangle').className = 'glyphicon glyphicon-triangle-right';
-   } else{
-      e.style.display = 'block';
-      document.getElementById('triangle').className = 'glyphicon glyphicon-triangle-bottom';
-   }
 }
