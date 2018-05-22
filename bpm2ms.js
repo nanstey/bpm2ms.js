@@ -3,13 +3,17 @@ var durations = ["Whole", "Half", "Quarter", "Eighth", "16th", "32th", "64th", "
 window.onload = function(){
   // Init
   document.getElementById("bpm").value = 120;
-  bpm2ms(120);
+  triggerUpdate();
 }
 
-document.getElementById("update").addEventListener("click", function(){
+document.getElementById("update").addEventListener("click", triggerUpdate);
+document.getElementById("plus").addEventListener("click", triggerUpdate);
+document.getElementById("minus").addEventListener("click", triggerUpdate);
+
+function triggerUpdate(){
   var bpm = document.getElementById("bpm").value;
   bpm2ms(bpm);
-});
+}
 
 function bpm2ms(bpm){
 
